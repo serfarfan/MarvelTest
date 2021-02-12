@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.sergio.marveltest.R;
 import com.sergio.marveltest.databinding.ItemMarvelBinding;
 import com.sergio.marveltest.model.Result;
-import com.sergio.marveltest.viewModel.ItemMarvelVModel;
+import com.sergio.marveltest.viewModel.ItemMarvelObservable;
 
 import java.util.Collections;
 import java.util.List;
@@ -57,7 +57,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MarvelHolder>{
 
         void bindResult(Result result){
             if( itemMarvelBinding.getItemViewModel() == null){
-                itemMarvelBinding.setItemViewModel(new ItemMarvelVModel(result, itemView.getContext()));
+                itemMarvelBinding.setItemViewModel(new ItemMarvelObservable(result, itemView.getContext()));
             } else {
                 itemMarvelBinding.getItemViewModel().setResult(result);
             }

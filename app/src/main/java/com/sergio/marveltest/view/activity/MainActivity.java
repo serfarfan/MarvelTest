@@ -9,7 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.sergio.marveltest.R;
 import com.sergio.marveltest.databinding.ActivityMainBinding;
 import com.sergio.marveltest.view.adapter.ListAdapter;
-import com.sergio.marveltest.viewModel.MarvelViewModel;
+import com.sergio.marveltest.viewModel.MarvelObservable;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -17,7 +17,7 @@ import java.util.Observer;
 public class MainActivity extends AppCompatActivity implements Observer {
 
     private ActivityMainBinding activityMainBinding;
-    private MarvelViewModel marvelViewModel;
+    private MarvelObservable marvelObservable;
 
 
     @Override
@@ -25,14 +25,14 @@ public class MainActivity extends AppCompatActivity implements Observer {
         super.onCreate(savedInstanceState);
         initDataBinding();
         setUpListOfResults(activityMainBinding.recyclerview);
-        setUpObserver(marvelViewModel);
+        setUpObserver(marvelObservable);
     }
 
     private void initDataBinding() {
 
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        marvelViewModel = new MarvelViewModel(this);
-        activityMainBinding.setViewModel(marvelViewModel);
+        marvelObservable = new MarvelObservable(this);
+        activityMainBinding.setViewModel(marvelObservable);
     }
 
     // set up the list of results with recycler view
@@ -49,10 +49,10 @@ public class MainActivity extends AppCompatActivity implements Observer {
     @Override
     public void update(Observable observable, Object o) {
 
-        if (observable instanceof  MarvelViewModel){
+        if (observable instanceof MarvelObservable){
             ListAdapter listAdapter = (ListAdapter) activityMainBinding.recyclerview.getAdapter();
-            MarvelViewModel marvelViewModel = (MarvelViewModel) observable;
-            if (listAdapter != null)listAdapter.setResultList(marvelViewModel.getMarvelResultList());
+            MarvelObservable marvelObservable = (MarvelObservable) observable;
+            if (listAdapter != null)listAdapter.setResultList(marvelObservable.getMarvelResultList());
         }
     }
 
@@ -60,6 +60,6 @@ public class MainActivity extends AppCompatActivity implements Observer {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        marvelViewModel.reset();
+        marvelObservable.reset();
     }
 }

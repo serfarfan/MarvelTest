@@ -10,7 +10,7 @@ import android.os.Bundle;
 import com.sergio.marveltest.R;
 import com.sergio.marveltest.databinding.ActivityDetailBinding;
 import com.sergio.marveltest.model.Result;
-import com.sergio.marveltest.viewModel.MarvelDetailVModel;
+import com.sergio.marveltest.viewModel.MarvelDetailObservable;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -41,7 +41,7 @@ public class DetailActivity extends AppCompatActivity {
 
     private void getExtrasFromIntent(){
         Result result = (Result) getIntent().getSerializableExtra(EXTRA_RESULT);
-        MarvelDetailVModel detailViewModel = new MarvelDetailVModel(result);
+        MarvelDetailObservable detailViewModel = new MarvelDetailObservable(result);
         activityDetailBinding.setDetailViewModel(detailViewModel);
     }
 }

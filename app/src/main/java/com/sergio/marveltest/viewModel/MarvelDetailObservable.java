@@ -8,11 +8,11 @@ import com.sergio.marveltest.model.Result;
 
 import java.util.Observable;
 
-public class MarvelDetailVModel extends Observable {
+public class MarvelDetailObservable extends Observable {
 
     private Result result;
 
-    public MarvelDetailVModel(Result result){
+    public MarvelDetailObservable(Result result){
         this.result = result;
     }
 

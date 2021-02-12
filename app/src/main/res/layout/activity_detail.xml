@@ -3,11 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
     <data>
         <variable
             name="detailViewModel"
-            type="com.sergio.marveltest.viewModel.MarvelDetailVModel"/>
+            type="com.sergio.marveltest.viewModel.MarvelDetailObservable"/>
     </data>
 
     <ScrollView

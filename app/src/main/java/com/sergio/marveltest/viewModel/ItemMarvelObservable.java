@@ -10,12 +10,12 @@ import com.bumptech.glide.Glide;
 import com.sergio.marveltest.model.Result;
 import com.sergio.marveltest.view.activity.DetailActivity;
 
-public class ItemMarvelVModel extends BaseObservable {
+public class ItemMarvelObservable extends BaseObservable {
 
     private Result result;
     private Context context;
 
-    public ItemMarvelVModel(Result result, Context context){
+    public ItemMarvelObservable(Result result, Context context){
         this.result = result;
         this.context = context;
     }

@@ -22,7 +22,7 @@ import io.reactivex.functions.Consumer;
 
 import static com.sergio.marveltest.utils.Constants.URL;
 
-public class MarvelViewModel extends Observable {
+public class MarvelObservable extends Observable {
 
     public ObservableInt progressBar;
     public ObservableInt marvelRecycler;
@@ -30,7 +30,7 @@ public class MarvelViewModel extends Observable {
     private Context context;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
 
-    public MarvelViewModel(@NonNull Context context){
+    public MarvelObservable(@NonNull Context context){
         this.context = context;
         this.marvelList = new ArrayList<>();
         progressBar = new ObservableInt(View.GONE);
