@@ -8,7 +8,7 @@
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="com.sergio.marveltest.viewModel.MarvelObservable" />
+            type="com.sergio.marveltest.observable.MarvelObservable" />
     </data>
 
     <LinearLayout

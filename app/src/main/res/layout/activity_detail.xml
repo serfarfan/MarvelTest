@@ -6,7 +6,7 @@
     <data>
         <variable
             name="detailViewModel"
-            type="com.sergio.marveltest.viewModel.MarvelDetailObservable"/>
+            type="com.sergio.marveltest.observable.MarvelDetailObservable"/>
     </data>
 
     <ScrollView

@@ -9,7 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.sergio.marveltest.R;
 import com.sergio.marveltest.databinding.ActivityMainBinding;
 import com.sergio.marveltest.view.adapter.ListAdapter;
-import com.sergio.marveltest.viewModel.MarvelObservable;
+import com.sergio.marveltest.observable.MarvelObservable;
 
 import java.util.Observable;
 import java.util.Observer;

@@ -1,4 +1,4 @@
-package com.sergio.marveltest.viewModel;
+package com.sergio.marveltest.observable;
 
 import java.util.ArrayList;
 import java.util.List;

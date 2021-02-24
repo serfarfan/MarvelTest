@@ -1,4 +1,4 @@
-package com.sergio.marveltest.viewModel;
+package com.sergio.marveltest.observable;
 
 import android.databinding.BindingAdapter;
 import android.widget.ImageView;

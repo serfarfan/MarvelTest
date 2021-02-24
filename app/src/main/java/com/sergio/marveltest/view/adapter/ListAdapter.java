@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.sergio.marveltest.R;
 import com.sergio.marveltest.databinding.ItemMarvelBinding;
 import com.sergio.marveltest.model.Result;
-import com.sergio.marveltest.viewModel.ItemMarvelObservable;
+import com.sergio.marveltest.observable.ItemMarvelObservable;
 
 import java.util.Collections;
 import java.util.List;

@@ -10,7 +10,7 @@ import android.os.Bundle;
 import com.sergio.marveltest.R;
 import com.sergio.marveltest.databinding.ActivityDetailBinding;
 import com.sergio.marveltest.model.Result;
-import com.sergio.marveltest.viewModel.MarvelDetailObservable;
+import com.sergio.marveltest.observable.MarvelDetailObservable;
 
 public class DetailActivity extends AppCompatActivity {
 
